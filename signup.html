@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Templates">
+  <meta name="author" content="Ryan Daniel">
+  <meta name="keywords" content="Templates">
+  <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+  <!-- Title Page-->
+  <title>ClarusBank</title>
+
+  <!-- Icons font CSS-->
+  <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+  <link href="assets/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" />
+  <link href="assets/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Font special for pages-->
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet" />
+
+  <!-- assets CSS-->
+  <link href="assets/select2/select2.min.css" rel="stylesheet" />
+  <link href="assets/datepicker/daterangepicker.css" rel="stylesheet" />
+
+  <!-- Main CSS-->
+  <link href="css/style.css" rel="stylesheet" />
+  <style>
+    .redColorClass {
+      color: red;
+    }
+
+    .greenColorClass {
+      color: green;
+    }
+
+    #header {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+    <div class="wrapper wrapper--w680">
+      <div class="card card-4">
+        <div class="card-body">
+          <header id="header">
+            <ul class="nav__links">
+              <li class="nav__item">
+                <a class="nav__link" href="#section--1">Paths</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#section--2">Instructors</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#section--2">Students</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Community</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link nav__link--btn btn--show-modal" href="signup.html">Sign Up</a>
+              </li>
+            </ul>
+            <img src="img/logo.png" alt="Bank logo" class="nav__logo" id="logo" />
+            <h2 class="title">Registration Page</h2>
+          </header>
+          <form method="POST" id="registration_form">
+            <div class="row row-space">
+              <div class="col-2">
+                <div class="input-group">
+                  <label class="label">First Name</label>
+                  <input class="input--style-4" type="text" name="first_name" />
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="input-group">
+                  <label class="label">Last Name</label>
+                  <input class="input--style-4" type="text" name="last_name" maxlength="40" />
+                  <span id="charCount"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row row-space">
+              <div class="col-2">
+                <div class="input-group">
+                  <label class="label">Birthday</label>
+                  <div class="input-group-icon">
+                    <input type="date" name="birthday">
+                  </div>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="input-group">
+                  <label class="label">Gender</label>
+                  <div class="p-t-10">
+                    <label class="radio-container m-r-45">Male
+                      <input type="radio" checked="checked" name="gender" />
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="radio-container">Female
+                      <input type="radio" name="gender" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row row-space">
+              <div class="col-2">
+                <div class="input-group">
+                  <label class="label">Email</label>
+                  <input class="input--style-4" type="email" name="email" onkeyup="validateEmail()" />
+                  <span id="errorSpan"></span>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="input-group">
+                  <label class="label">Phone Number</label>
+                  <input class="input--style-4" type="number" name="phone" />
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <label class="label">Subject</label>
+              <div class="rs-select2 js-select-simple select--no-search">
+                <select name="subject" id="paths">
+                  <option disabled="disabled" selected="selected">
+                    Choose your Path
+                  </option>
+                  <option>FullStack</option>
+                  <option>AWS-DevOps</option>
+                  <option>Data Science</option>
+                  <option>Cyber Security</option>
+                  <option>SalesForce</option>
+                </select>
+                <div class="select-dropdown"></div>
+              </div>
+            </div>
+            <div class="p-t-15">
+              <button class="btn btn--radius-2 btn--blue" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jquery JS-->
+  <script src="assets/jquery/jquery.min.js"></script>
+  <!-- assets JS-->
+  <script src="assets/select2/select2.min.js"></script>
+  <script src="assets/datepicker/moment.min.js"></script>
+  <script src="assets/datepicker/daterangepicker.js"></script>
+  <script src="js/global.js"></script>
+  <script src="signup.js"></script>
+</body>
+
+</html>
+<!-- end document-->
